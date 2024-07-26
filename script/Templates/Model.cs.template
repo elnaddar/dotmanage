@@ -1,0 +1,6 @@
+namespace {{NAMESPACE}}.Models;
+
+public class {{CLASSNAME}}ViewModel
+{
+    // Add properties here
+}

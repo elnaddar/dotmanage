@@ -1,0 +1,26 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using {{NAMESPACE}}.Models;
+
+namespace {{NAMESPACE}}.Controllers;
+public class {{CLASSNAME}}Controller : Controller
+{
+    private readonly ILogger<{{CLASSNAME}}Controller> _logger;
+
+    public {{CLASSNAME}}Controller(ILogger<{{CLASSNAME}}Controller> logger)
+    {
+        _logger = logger;
+    }
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+    // Add actions here
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+}
